@@ -31,6 +31,7 @@ You have to develop a streets colouring algorithm using python3 and create a rea
 - To read .shp file you can use 'fiona' or 'shapely' or any other lib you like
 - To understand what is inside initial data you can use QGis
 - You don't need to know graphs
+- Partial solutions also accepted
 
 ## What will be checked during test task evaluation?
 - Solution should correspond to requirements
