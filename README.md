@@ -1,5 +1,7 @@
 # Junior Python developer test task (GIS)
 ![python3](https://img.shields.io/badge/-python3-yellowgreen)
+![docker](https://img.shields.io/badge/-Docker-orange)
+![GIS](https://img.shields.io/badge/-GIS-blue)
 
 ## Helpful links (DON'T FORGET TO UPDATE LINKS)
 To submit your application, please put your results into this [form](https://forms.gle/hLrkZvZDVFkBG7Wy6)
