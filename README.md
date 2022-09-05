@@ -38,10 +38,10 @@ You have to develop a streets colouring algorithm using python3 and create a rea
 - Efficiency of solution
 - Clean git history with understandable commit messages
 
-## Example of possible output
-Sample input(but multilines are splitted into simple lines)
+## Examples
+Sample input (but multilines are splitted into simple lines).
 ![Initial data](https://raw.githubusercontent.com/zakhar-bozhok-jito/jun-python-gis-test-task/master/out-examples/initial.png)
-Possible generated output of the solution (some lines were randomly colourized in same colours)
+Possible generated output of the solution. Lines are randomly colourized. But some of different lines were occasionaly colourized the same color.
 ![Sample output1](https://raw.githubusercontent.com/zakhar-bozhok-jito/jun-python-gis-test-task/master/out-examples/processed-solid.png)
 Possible generated output, but lines have also different line styles.
 ![Sample output2](https://raw.githubusercontent.com/zakhar-bozhok-jito/jun-python-gis-test-task/master/out-examples/processed.png)
