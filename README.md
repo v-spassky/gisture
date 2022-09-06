@@ -17,7 +17,7 @@ You have to develop a streets colouring algorithm using python3 and create a rea
 ## Requirements:
 - Web site has to accept .zip archive with .shp file and other files required to read .shp (like .shx, .sbx, etc.)
 - Server has to return generated image in base64 
-- Solution has to generate images large enough to destignuish lines 
+- Solution has to generate images large enough to distinguish lines 
 - Your repo with solution should contain file with explanation of how your algorithm works (it can be added to README.md with section Explanation)
 - Web site should allow to generate .png from sample data. In other words sample data should be embedded into the solution (create separate button for that)
 - Solution has to be dockerized
