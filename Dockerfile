@@ -1,6 +1,9 @@
-FROM alpine:latest
-# Update to configure dependencies you need to solve the task
-RUN apk update && apk add python3
-RUN mkdir /app
-WORKDIR /app
-COPY main.py main.py
+FROM python:3.8
+
+WORKDIR /code
+
+COPY . ./
+
+RUN pip install -r requirements.txt
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "4", "app:app"]

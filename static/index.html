@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+
+    <title>gisture</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body class="min-h-screen w-full relative
+             flex justify-center items-center
+             bg-pink-100 text-zinc-800 p-2"
+      style="font-family: 'Source Code Pro', monospace;">
+
+    <aside class="fixed top-1/4 left-0
+                  bg-gradient-to-tr from-pink-300 via-purple-300 to-indigo-400
+                  p-2 space-y-2
+                  list-none font-bold select-none">
+
+        <h1>samples</h1>
+
+        <li>
+            • <span class="hover:underline cursor-pointer">Rome</span>
+        </li>
+
+        <li>
+            • <span class="hover:underline cursor-pointer">New York</span>
+        </li>
+
+        <li>
+            • <span class="hover:underline cursor-pointer">Rio</span>
+        </li>
+
+        <li>
+            • <span class="hover:underline cursor-pointer">Osaka</span>
+        </li>
+
+    </aside>
+
+    <main class="w-1/2 flex items-center justify-center space-x-10">
+
+        <img src="static/archive_picture.png" style="width: 196px; height: 196px;">
+
+        <form action="/process_archive" class="dropzone" id="zip-dropzone" style="width: 196px; height: 196px; padding: 20;">
+            <div class="dz-default dz-message" style="width: 100%; height: 100%; margin: 0; position: relative;">
+                <button class="dz-button" type="button" style="width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    Drop your archive here or click to select it via file explorer.
+                </button>
+            </div>
+        </form>
+
+    </main>
+
+    <script>
+
+        // Dropzone configurations go here
+        Dropzone.options.zipDropzone = {
+            success : function(file, response){
+                // Replace dropzone form with a identically looking container 
+                // with a link to download the output picture
+                let picture_id = response;
+                let dropzone = document.getElementById('zip-dropzone');
+                let dropzoneStyles = window.getComputedStyle(dropzone);
+                let replacementHTML = `
+                    <div class="space-y-2 h-full flex flex-col justify-center items-center">
+                        <h1>Ready!</h1>
+                        <div>
+                            <a href="download_output/${picture_id}" download 
+                               class="bg-gradient-to-tr from-pink-300 via-purple-300 to-indigo-400
+                                      p-2 font-bold cursor-pointer">
+                                Download
+                            </a>
+                        </div>
+                    </div>`;
+                let replacementContainer = document.createElement('div');
+                replacementContainer.innerHTML = replacementHTML;
+                Array.from(dropzoneStyles).forEach(key => 
+                    replacementContainer.style.setProperty(key, dropzoneStyles.getPropertyValue(key), dropzoneStyles.getPropertyPriority(key))
+                )
+                replacementContainer.style.cursor = "default";
+
+                dropzone.replaceWith(replacementContainer);
+            },
+        };
+
+    </script>
+
+</body>
