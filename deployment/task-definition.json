@@ -17,7 +17,7 @@
       "entryPoint": null,
       "portMappings": [
         {
-          "hostPort": 0,
+          "hostPort": 80,
           "protocol": "tcp",
           "containerPort": 8000
         }
@@ -37,7 +37,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "410067354733.dkr.ecr.eu-central-1.amazonaws.com/gisture",
+      "image": "410067354733.dkr.ecr.eu-central-1.amazonaws.com/gisture:390231598863a87ef4f460964695f825a45baa1a",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -64,7 +64,7 @@
     "EXTERNAL",
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:410067354733:task-definition/deploy-disture:1",
+  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:410067354733:task-definition/deploy-disture:3",
   "family": "deploy-disture",
   "requiresAttributes": [
     {
@@ -99,7 +99,7 @@
   "networkMode": "bridge",
   "runtimePlatform": null,
   "cpu": null,
-  "revision": 1,
+  "revision": 3,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
