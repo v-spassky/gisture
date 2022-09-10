@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: gisture
   ECS_SERVICE: gisture-service
   ECS_CLUSTER: gisture-cluster
-  ECS_TASK_DEFINITION: .deployment/task-definition.json
+  ECS_TASK_DEFINITION: ./deployment/task-definition.json
   CONTAINER_NAME: gisture-container
 
 permissions:
