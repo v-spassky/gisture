@@ -6,7 +6,6 @@ from flask import (
     Flask,
     request,
     send_from_directory,
-    send_file,
 )
 import fiona
 import matplotlib.pyplot as plt
@@ -21,7 +20,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     """
-    Renders home page.
+    Renders the home page.
     """
 
     return send_from_directory(
@@ -61,17 +60,18 @@ def page_not_found(e):
 @app.route('/process_archive', methods=['POST'])
 def process_archive():
     """
-    Handles shapefile processing. Expects .zip archive for input.
-    Returns a .png represnetation of a given shapefile.
+    Handles shapefile processing. Expects .zip archive for input. 
+    Returns an id, using which the client can download the output 
+    via the '/download_output/<id>' endpoint.
     """
 
     # TODO:
-    # - clean up seved files;
-    # - request has no file in it;
-    # - archive doesn`t contain smth necessary;
+    # - clean up saved files;
+    # - what if the request has no file in it;
+    # - what if the archive doesn`t contain smth necessary;
     # - zip bomb diffusion;
     # - do some research on how to process it in memory;
-    # - plt.close()???;
+    # - DPI and linewidth should be adjusetd dynamically based on area size
 
     upload_id = str(uuid4())
 
@@ -89,11 +89,15 @@ def process_archive():
 
     with fiona.open(shapefile_name) as shapefile:
         for item in shapefile:
-            plt.plot(*zip(*item['geometry']['coordinates']))
+            plt.plot(*zip(*item['geometry']['coordinates']), linewidth=0.5)
 
     picture_path = f'temp/{upload_id}.png'
 
-    plt.savefig(picture_path)
+    plt.axis('scaled')
+    plt.xticks(fontsize=6)
+    plt.yticks(fontsize=6)
+    plt.savefig(picture_path, dpi=500)
+    plt.close()
 
     return upload_id
 

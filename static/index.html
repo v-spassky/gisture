@@ -32,19 +32,23 @@
         <h1>samples</h1>
 
         <li>
-            • <span class="hover:underline cursor-pointer">Rome</span>
+            • <a href="static/samples/South SF.zip" download class="hover:underline cursor-pointer">South SF</a>
         </li>
 
         <li>
-            • <span class="hover:underline cursor-pointer">New York</span>
+            • <a href="static/samples/Manhattan Beach.zip" download class="hover:underline cursor-pointer">Manhattan Beach</a>
         </li>
 
         <li>
-            • <span class="hover:underline cursor-pointer">Rio</span>
+            • <a href="static/samples/Sandy Springs.zip" download class="hover:underline cursor-pointer">Sandy Springs</a>
         </li>
 
         <li>
-            • <span class="hover:underline cursor-pointer">Osaka</span>
+            • <a href="static/samples/Honolulu.zip" download class="hover:underline cursor-pointer">Honolulu</a>
+        </li>
+
+        <li>
+            • <a href="static/samples/Miami.zip" download class="hover:underline cursor-pointer">Miami</a>
         </li>
 
     </aside>
@@ -74,13 +78,20 @@
                 let dropzone = document.getElementById('zip-dropzone');
                 let dropzoneStyles = window.getComputedStyle(dropzone);
                 let replacementHTML = `
-                    <div class="space-y-2 h-full flex flex-col justify-center items-center">
-                        <h1>Ready!</h1>
-                        <div>
+                    <div class="h-full flex flex-col justify-center items-start">
+                        <h1 class="mb-2">Ready!</h1>
+                        <div class="mb-4">
                             <a href="download_output/${picture_id}" download 
                                class="bg-gradient-to-tr from-pink-300 via-purple-300 to-indigo-400
                                       p-2 font-bold cursor-pointer">
-                                Download
+                                ↲ Download
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/"
+                               class="bg-gradient-to-tr from-pink-300 via-purple-300 to-indigo-400
+                                      p-2 font-bold cursor-pointer">
+                                ↺ Back
                             </a>
                         </div>
                     </div>`;

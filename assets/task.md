@@ -3,10 +3,6 @@
 ![docker](https://img.shields.io/badge/-Docker-orange)
 ![GIS](https://img.shields.io/badge/-GIS-blue)
 
-## Helpful links (DON'T FORGET TO UPDATE LINKS)
-To submit your application, please put your results into this [form](https://forms.gle/Uj7jtPXQqpVVDB86A)
-Feel free to ask questions [here](https://app.sli.do/event/gqUbu9yWGk9xtNN5w6YHpw)
-
 ## Overiview
 GIS is Geospatial Information Systems. 
 It's acceptable that you will learn it later.

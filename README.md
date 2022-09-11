@@ -1,6 +1,8 @@
 ### Description
 
-This is a solution for such and such
+It is a solution to [this](assets/task.md) test problem.
+
+### Notes
 
 ### Demonstration
 
@@ -8,6 +10,6 @@ This is a solution for such and such
 
 ### How to run locally
 
-#### In development mode
+#### In Docker
 
-#### Docker
+#### In virtual environment
