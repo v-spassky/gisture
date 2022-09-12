@@ -71,7 +71,7 @@ def process_archive():
     # - what if the archive doesn`t contain smth necessary;
     # - zip bomb diffusion;
     # - do some research on how to process it in memory;
-    # - DPI and linewidth should be adjusetd dynamically based on area size
+    # - DPI and linewidth should be adjusetd dynamically based on area size;
 
     upload_id = str(uuid4())
 

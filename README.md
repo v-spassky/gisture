@@ -1,19 +1,6 @@
 ### Description
 
-It is a solution to [this](assets/task/task.md) test problem. Hosted **[<span style="color: white; background: linear-gradient(
-        90deg,
-        rgba(255, 0, 0, 1) 0%,
-        rgba(255, 154, 0, 1) 10%,
-        rgba(208, 222, 33, 1) 20%,
-        rgba(79, 220, 74, 1) 30%,
-        rgba(63, 218, 216, 1) 40%,
-        rgba(47, 201, 226, 1) 50%,
-        rgba(28, 127, 238, 1) 60%,
-        rgba(95, 21, 242, 1) 70%,
-        rgba(186, 12, 248, 1) 80%,
-        rgba(251, 7, 217, 1) 90%,
-        rgba(255, 0, 0, 1) 100%
-    );">→here←</span>](http://ec2-3-71-109-60.eu-central-1.compute.amazonaws.com/)**.
+It is a solution to [this](assets/task/task.md) test problem. Hosted **[→here←](http://ec2-3-71-109-60.eu-central-1.compute.amazonaws.com/)**.
 
 ### Notes
 
@@ -23,6 +10,8 @@ It is a solution to [this](assets/task/task.md) test problem. Hosted **[<span st
 - Sample data to try it out is included in the repo [here](static/samples) and can be accessed from the frontend as well;
 
 ### Demonstration
+
+*The gif below is 40 Mb and might take a while to load. Sorry!*
 
 <img src="assets/demo.gif" style="width:100%; max-width: 100%;">
 
