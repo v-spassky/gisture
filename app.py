@@ -88,8 +88,8 @@ def process_archive():
     shapefile_name = shapefiles[0]
 
     with fiona.open(shapefile_name) as shapefile:
-        for item in shapefile:
-            plt.plot(*zip(*item['geometry']['coordinates']), linewidth=0.5)
+        for record in shapefile:
+            plt.plot(*zip(*record['geometry']['coordinates']), linewidth=0.5)
 
     picture_path = f'temp/{upload_id}.png'
 
