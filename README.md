@@ -1,6 +1,6 @@
 ### Description
 
-It is a solution to [this](assets/task/task.md) test problem. Hosted **[→here←](http://ec2-3-71-109-60.eu-central-1.compute.amazonaws.com/)**.
+It is a solution to [this](assets/task/task.md) test problem.
 
 ### Notes
 
@@ -11,7 +11,7 @@ It is a solution to [this](assets/task/task.md) test problem. Hosted **[→here�
 
 ### Demonstration
 
-*The gif below is 40 Mb and might take a while to load. Sorry!*
+_The gif below is 40 Mb and might take a while to load. Sorry!_
 
 <img src="assets/demo.gif" style="width:100%; max-width: 100%;">
 
